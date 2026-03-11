@@ -9,7 +9,7 @@
     let
       version = "1.19.2b";
       downloadUrl = "https://github.com/zen-browser/desktop/releases/download/${version}/zen.linux-x86_64.tar.xz";
-      sha256 = "sha256:18a3xy3g6nxbm1pvsznjk68c0zvbzs6pka3y919ssvi2fb7hw2vi";
+      sha256 = "sha256:0fg12f4mx2nkdz5gclzb73rmq8ppway3fcg0k3aw28w85m70ga62";
 
       forAllSystems = nixpkgs.lib.genAttrs [ "x86_64-linux" "aarch64-linux" ];
       
