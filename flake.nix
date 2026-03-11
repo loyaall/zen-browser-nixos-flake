@@ -7,15 +7,13 @@
 
   outputs = { self, nixpkgs }:
     let
-      version = "1.17.12b";
+      version = "1.19.2b";
       downloadUrl = "https://github.com/zen-browser/desktop/releases/download/${version}/zen.linux-x86_64.tar.xz";
       sha256 = "sha256:18a3xy3g6nxbm1pvsznjk68c0zvbzs6pka3y919ssvi2fb7hw2vi";
 
       forAllSystems = nixpkgs.lib.genAttrs [ "x86_64-linux" "aarch64-linux" ];
       
-      pkgsFor = system: import nixpkgs {
-        inherit system;
-      };
+	  pkgsFor = system: nixpkgs.legacyPackages.${system};
       
       mkZenFor = system: let
         pkgs = pkgsFor system;
