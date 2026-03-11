@@ -20,7 +20,7 @@
 
         runtimeLibs = with pkgs; [
           libGL libGLU libevent libffi libjpeg libpng libstartup_notification libvpx libwebp
-          stdenv.cc.cc fontconfig libxkbcommon zlib speechd freetype
+          gcc-unwrapped fontconfig libxkbcommon zlib speechd freetype
           gtk3 libxml2 dbus xcb-util-cursor alsa-lib libpulseaudio pango atk cairo gdk-pixbuf glib
 	  udev libva mesa libnotify cups pciutils
 	  ffmpeg libglvnd pipewire
